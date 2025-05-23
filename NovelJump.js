@@ -81,6 +81,7 @@
         input.style.width = '100%';
         input.style.marginTop = '6px';
         input.style.boxSizing = 'border-box';
+        input.value = sectionId + 1; // 自动填充下一节
 
         const goBtn = document.createElement('button');
         goBtn.textContent = '跳转节';
