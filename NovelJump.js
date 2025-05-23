@@ -2,7 +2,7 @@
 // @name         NovelJump
 // @name:zh      小说章节跳转
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.1.0
 // @description  轻松跳转小说章节
 // @author       SuniRein
 // @match        https://www.linovelib.com/*
