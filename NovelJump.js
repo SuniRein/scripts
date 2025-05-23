@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name         NovelJump
 // @name:zh      小说章节跳转
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/SuniRein/scripts
 // @version      1.1.0
 // @description  轻松跳转小说章节
 // @author       SuniRein
 // @match        https://www.linovelib.com/*
 // @grant        none
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=linovelib.com
-// @license      GPLv3
+// @license      GPL3
+// @supportURL   https://github.com/SuniRein/scripts/blob/main/CHANGELOG.md
 // ==/UserScript==
 
 (function () {

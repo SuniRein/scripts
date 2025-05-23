@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BilinovelAntiBlock
 // @name:zh      Bilinovel 反广告屏蔽
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/SuniRein/scripts
 // @version      1.1.0
 // @description  抑制 Bilinovel 检测到广告屏蔽插件后隐藏内容
 // @author       SuniRein
@@ -9,7 +9,8 @@
 // @grant        none
 // @run-at       document-start
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=bilinovel.com
-// @license      GPLv3
+// @license      GPL3
+// @supportURL   https://github.com/SuniRein/scripts/blob/main/CHANGELOG.md
 // ==/UserScript==
 
 // 灵感来源: https://greasyfork.org/zh-CN/scripts/533617-bilinovel
