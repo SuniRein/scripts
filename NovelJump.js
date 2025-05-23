@@ -45,6 +45,20 @@
         window.location.href = generateUrl(novelId, chapterId, sectionId);
     }
 
+    function getFinalSectionId(info) {
+        if (info.sectionId == 1) {
+            console.log('[NovelJump] 当前章节为第一节，无法获取最后一节 ID');
+            return null;
+        }
+
+        const title = document.getElementsByTagName('h1')[0].textContent;
+        const finalSectionIdStr = title.match(/（(\d+)\/(\d+)）/)[2];
+        const finalSectionId = parseInt(finalSectionIdStr, 10);
+        console.log('[NovelJump] 成功获取最后一节 ID');
+
+        return finalSectionId;
+    }
+
     // 创建悬浮框并添加到页面
     function createFloatingPanel(info) {
         const { novelId, chapterId, sectionId } = info;
@@ -95,7 +109,17 @@
             jump(novelId, chapterId, section);
         };
 
-        [prevBtn, nextBtn, input, goBtn].forEach((el) => {
+        let elements = [prevBtn, nextBtn, input, goBtn];
+
+        let finalSectionId = getFinalSectionId(info);
+        if (finalSectionId) {
+            const lastBtn = document.createElement('button');
+            lastBtn.textContent = '最后一节';
+            lastBtn.onclick = () => jump(novelId, chapterId, finalSectionId);
+            elements.push(lastBtn);
+        }
+
+        elements.forEach((el) => {
             el.style.display = 'block';
             el.style.margin = '4px 0';
             el.style.width = '100%';
