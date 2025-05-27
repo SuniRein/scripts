@@ -11,6 +11,9 @@ importers:
       '@eslint/js':
         specifier: ^9.27.0
         version: 9.27.0
+      '@types/tampermonkey':
+        specifier: ^5.0.4
+        version: 5.0.4
       eslint:
         specifier: ^9.27.0
         version: 9.27.0
@@ -83,6 +86,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/tampermonkey@5.0.4':
+    resolution: {integrity: sha512-HEJ0O5CkDZSwIgd9Zip4xM8o7gZC8zBmJuH1YEXNINIC+aCWEXD10pnpo3NQG5IWHx+Xr4fMSGq1jqeKXH2lpA==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -423,6 +429,8 @@ snapshots:
   '@types/estree@1.0.7': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/tampermonkey@5.0.4': {}
 
   acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
