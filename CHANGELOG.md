@@ -1,5 +1,11 @@
 # BiliNovel Anti Block
 
+## 1.2.0 - 2025-5-28
+
+### Added
+
+- 适配 `linovelib.com`
+
 ## 1.1.0 - 2025-5-13
 
 ### Fixed
