@@ -55,7 +55,7 @@
     }
 
     function showElement(element) {
-        element.style.setProperty('display', 'block', 'important');
+        element.removeAttribute('style');
     }
 
     function hideElement(element) {
