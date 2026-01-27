@@ -23,6 +23,9 @@
     const maxWaitTime = 15000;
     let timeWaited = 0;
 
+    // 保护 console 不被覆盖
+    Object.freeze(console);
+
     // 根据不同网页定位目标元素
     function analyzePage() {
         const hostname = window.location.hostname;
