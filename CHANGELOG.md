@@ -1,5 +1,16 @@
 # BiliNovel Anti Block
 
+## 1.3.0 - 2026-1-27
+
+### Added
+
+- 关闭 `linovelib.com` 广告弹窗
+
+### Fixed
+
+- `bilinovel.com` 文章无法加载
+- `console` 被覆盖，无日志输出
+
 ## 1.2.0 - 2025-5-28
 
 ### Added
