@@ -126,6 +126,26 @@
                     attributeFilter: ['style'],
                 });
             }
+
+            // 检测 linovelib 广告弹窗
+            if (window.location.hostname === 'www.linovelib.com') {
+                const bodyObserver = new MutationObserver((mutationsList) => {
+                    for (const mutation of mutationsList) {
+                        if (mutation.type === 'childList') {
+                            mutation.addedNodes.forEach((node) => {
+                                if (node.nodeType === Node.ELEMENT_NODE) {
+                                    const bnt = node.querySelector('#close-btn');
+                                    if (bnt) {
+                                        console.log('Bilinovel: 发现广告弹窗，尝试关闭');
+                                        bnt.click();
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
+                bodyObserver.observe(document.body, { childList: true, subtree: true });
+            }
         } else if (timeWaited >= maxWaitTime) {
             console.warn('Bilinovel: 获取目标元素超时 (' + maxWaitTime + 'ms)，停止检查。');
             clearInterval(intervalId);
