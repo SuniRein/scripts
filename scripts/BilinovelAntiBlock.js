@@ -2,7 +2,7 @@
 // @name         BilinovelAntiBlock
 // @name:zh      Bilinovel 反广告屏蔽
 // @namespace    https://github.com/SuniRein/scripts
-// @version      1.3.0
+// @version      1.4.0
 // @description  抑制 Bilinovel 检测到广告屏蔽插件后隐藏内容
 // @author       SuniRein
 // @match        https://www.bilinovel.com/*

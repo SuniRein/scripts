@@ -1,5 +1,12 @@
 # BiliNovel Anti Block
 
+## 1.4.0 - 2026-2-13
+
+### Fixed
+
+- 关闭存在于页面文档上的 `linovelib.com` 广告弹窗
+- 避免因 iframe 导致脚本执行多次
+
 ## 1.3.0 - 2026-1-27
 
 ### Added
