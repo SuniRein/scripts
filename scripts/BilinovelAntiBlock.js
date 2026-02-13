@@ -19,6 +19,8 @@
 (function () {
     'use strict';
 
+    if (window.self !== window.top) return;
+
     const checkElementInterval = 100;
     const maxWaitTime = 15000;
     let timeWaited = 0;
