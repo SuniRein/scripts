@@ -131,16 +131,22 @@
 
             // 检测 linovelib 广告弹窗
             if (window.location.hostname === 'www.linovelib.com') {
+                function removeLinovelibDialog(node) {
+                    const bnt = node.querySelector('#close-btn');
+                    if (bnt) {
+                        console.log('Bilinovel: 发现广告弹窗，尝试关闭');
+                        bnt.click();
+                    }
+                }
+
+                removeLinovelibDialog(document);
+
                 const bodyObserver = new MutationObserver((mutationsList) => {
                     for (const mutation of mutationsList) {
                         if (mutation.type === 'childList') {
                             mutation.addedNodes.forEach((node) => {
                                 if (node.nodeType === Node.ELEMENT_NODE) {
-                                    const bnt = node.querySelector('#close-btn');
-                                    if (bnt) {
-                                        console.log('Bilinovel: 发现广告弹窗，尝试关闭');
-                                        bnt.click();
-                                    }
+                                    removeLinovelibDialog(node);
                                 }
                             });
                         }
