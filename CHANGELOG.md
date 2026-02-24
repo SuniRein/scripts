@@ -1,5 +1,11 @@
 # BiliNovel Anti Block
 
+## 1.4.1 - 2026-2-24
+
+### Fixed
+
+- 适配 `bilinovel.com`，移除广告弹窗
+
 ## 1.4.0 - 2026-2-13
 
 ### Fixed
