@@ -2,7 +2,7 @@
 // @name         BilinovelAntiBlock
 // @name:zh      Bilinovel 反广告屏蔽
 // @namespace    https://github.com/SuniRein/scripts
-// @version      1.4.1
+// @version      1.4.2
 // @description  抑制 Bilinovel 检测到广告屏蔽插件后隐藏内容
 // @author       SuniRein
 // @match        https://www.bilinovel.com/*
@@ -34,9 +34,9 @@
         const href = window.location.href;
         if (hostname == 'www.bilinovel.com') {
             console.log('Bilinovel: 检测到 Bilinovel 网站');
-            if (href.includes('/catalog')) {
+            if (href.includes('/catalog') || href.includes('/vol')) {
                 return {
-                    getContent: () => document.getElementById('volumes'),
+                    getContent: () => document.querySelector('.content'),
                     isTitle: (ele) => ele.classList.contains('module-header'),
                 };
             }
@@ -46,7 +46,7 @@
             };
         } else if (hostname == 'www.linovelib.com') {
             console.log('Bilinovel: 检测到 Linovelib 网站');
-            if (href.includes('/catalog')) {
+            if (href.includes('/catalog') || href.includes('/vol')) {
                 return {
                     getContent: () => document.getElementById('volume-list'),
                     isTitle: (ele) => ele.classList.contains('section_title'),
